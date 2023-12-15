@@ -1,0 +1,275 @@
+[gd_scene load_steps=11 format=3 uid="uid://dfk20cfflgmqj"]
+
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_43h3w"]
+[ext_resource type="PackedScene" uid="uid://clqdd2j2uwdw0" path="res://Assets/cu_cat_maker/cu_cat_maker.fbx" id="2_hteoe"]
+[ext_resource type="Script" path="res://Scripts/SpringArm.gd" id="3_0idkq"]
+[ext_resource type="Animation" uid="uid://dxe3dhnry42j6" path="res://Assets/anim/CuCatIdleA.res" id="3_ghaou"]
+[ext_resource type="Texture2D" uid="uid://dj660to2oflx2" path="res://Assets/cu_cat_maker/Textures/cu_cat_d_col_highig.png" id="3_tsqxh"]
+[ext_resource type="Animation" uid="uid://bpvlvp6rgir6h" path="res://Assets/anim/CutCatWalkA.res" id="4_s4vsq"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wpwa8"]
+albedo_texture = ExtResource("3_tsqxh")
+
+[sub_resource type="Animation" id="Animation_6uyvy"]
+resource_name = "Take 001"
+length = 0.001
+tracks/0/type = "blend_shape"
+tracks/0/imported = true
+tracks/0/enabled = true
+tracks/0/path = NodePath("RootNode/Skeleton3D/cu_cat_mesh:cu_cat_blend.ear_big")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0)
+tracks/1/type = "blend_shape"
+tracks/1/imported = true
+tracks/1/enabled = true
+tracks/1/path = NodePath("RootNode/Skeleton3D/cu_cat_mesh:cu_cat_blend.ear_up")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = PackedFloat32Array(0, 1, 0)
+tracks/2/type = "blend_shape"
+tracks/2/imported = true
+tracks/2/enabled = true
+tracks/2/path = NodePath("RootNode/Skeleton3D/cu_cat_mesh:cu_cat_blend.ear_down")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = PackedFloat32Array(0, 1, 0)
+tracks/3/type = "blend_shape"
+tracks/3/imported = true
+tracks/3/enabled = true
+tracks/3/path = NodePath("RootNode/Skeleton3D/cu_cat_mesh:cu_cat_blend.ear_small")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = PackedFloat32Array(0, 1, 0)
+tracks/4/type = "blend_shape"
+tracks/4/imported = true
+tracks/4/enabled = true
+tracks/4/path = NodePath("RootNode/Skeleton3D/cu_cat_mesh:cu_cat_blend.hand_small")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = PackedFloat32Array(0, 1, 0)
+tracks/5/type = "blend_shape"
+tracks/5/imported = true
+tracks/5/enabled = true
+tracks/5/path = NodePath("RootNode/Skeleton3D/cu_cat_mesh:cu_cat_blend.hand_big")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = PackedFloat32Array(0, 1, 0)
+tracks/6/type = "blend_shape"
+tracks/6/imported = true
+tracks/6/enabled = true
+tracks/6/path = NodePath("RootNode/Skeleton3D/cu_cat_mesh:cu_cat_blend.foot_small")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = PackedFloat32Array(0, 1, 0)
+tracks/7/type = "blend_shape"
+tracks/7/imported = true
+tracks/7/enabled = true
+tracks/7/path = NodePath("RootNode/Skeleton3D/cu_cat_mesh:cu_cat_blend.foot_big")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = PackedFloat32Array(0, 1, 0)
+tracks/8/type = "blend_shape"
+tracks/8/imported = true
+tracks/8/enabled = true
+tracks/8/path = NodePath("RootNode/Skeleton3D/cu_cat_mesh:cu_cat_blend.tail_small")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = PackedFloat32Array(0, 1, 0)
+tracks/9/type = "blend_shape"
+tracks/9/imported = true
+tracks/9/enabled = true
+tracks/9/path = NodePath("RootNode/Skeleton3D/cu_cat_mesh:cu_cat_blend.tail_big")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = PackedFloat32Array(0, 1, 0)
+tracks/10/type = "blend_shape"
+tracks/10/imported = true
+tracks/10/enabled = true
+tracks/10/path = NodePath("RootNode/Skeleton3D/cu_cat_mesh:cu_cat_blend.body_slender")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = PackedFloat32Array(0, 1, 0)
+tracks/11/type = "blend_shape"
+tracks/11/imported = true
+tracks/11/enabled = true
+tracks/11/path = NodePath("RootNode/Skeleton3D/cu_cat_mesh:cu_cat_blend.body_fat")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = PackedFloat32Array(0, 1, 0)
+tracks/12/type = "blend_shape"
+tracks/12/imported = true
+tracks/12/enabled = true
+tracks/12/path = NodePath("RootNode/Skeleton3D/cu_cat_mesh:cu_cat_blend.hip_slender")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = PackedFloat32Array(0, 1, 0)
+tracks/13/type = "blend_shape"
+tracks/13/imported = true
+tracks/13/enabled = true
+tracks/13/path = NodePath("RootNode/Skeleton3D/cu_cat_mesh:cu_cat_blend.hip_fat")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = PackedFloat32Array(0, 1, 0)
+tracks/14/type = "blend_shape"
+tracks/14/imported = true
+tracks/14/enabled = true
+tracks/14/path = NodePath("RootNode/Skeleton3D/cu_cat_mesh:cu_cat_blend.muzzle_big")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = PackedFloat32Array(0, 1, 0)
+tracks/15/type = "blend_shape"
+tracks/15/imported = true
+tracks/15/enabled = true
+tracks/15/path = NodePath("RootNode/Skeleton3D/cu_cat_mesh:cu_cat_blend.muzzle_small")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = PackedFloat32Array(0, 1, 0)
+tracks/16/type = "blend_shape"
+tracks/16/imported = true
+tracks/16/enabled = true
+tracks/16/path = NodePath("RootNode/Skeleton3D/cu_cat_mesh:cu_cat_blend.eyelush_short")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = PackedFloat32Array(0, 1, 0)
+tracks/17/type = "blend_shape"
+tracks/17/imported = true
+tracks/17/enabled = true
+tracks/17/path = NodePath("RootNode/Skeleton3D/cu_cat_mesh:cu_cat_blend.eyelush_long")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = PackedFloat32Array(0, 1, 0)
+tracks/18/type = "blend_shape"
+tracks/18/imported = true
+tracks/18/enabled = true
+tracks/18/path = NodePath("RootNode/Skeleton3D/cu_cat_mesh:cu_cat_blend.whiskers_short")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = PackedFloat32Array(0, 1, 0)
+tracks/19/type = "blend_shape"
+tracks/19/imported = true
+tracks/19/enabled = true
+tracks/19/path = NodePath("RootNode/Skeleton3D/cu_cat_mesh:cu_cat_blend.whiskers_long")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = PackedFloat32Array(0, 1, 0)
+tracks/20/type = "blend_shape"
+tracks/20/imported = true
+tracks/20/enabled = true
+tracks/20/path = NodePath("RootNode/Skeleton3D/cu_cat_mesh:cu_cat_blend.muzzle_long")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = PackedFloat32Array(0, 1, 0)
+tracks/21/type = "blend_shape"
+tracks/21/imported = true
+tracks/21/enabled = true
+tracks/21/path = NodePath("RootNode/Skeleton3D/cu_cat_mesh:cu_cat_blend.muzzle_short")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = PackedFloat32Array(0, 1, 0)
+tracks/22/type = "blend_shape"
+tracks/22/imported = true
+tracks/22/enabled = true
+tracks/22/path = NodePath("RootNode/Skeleton3D/cu_cat_mesh:cu_cat_blend.side_small")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = PackedFloat32Array(0, 1, 0)
+tracks/23/type = "blend_shape"
+tracks/23/imported = true
+tracks/23/enabled = true
+tracks/23/path = NodePath("RootNode/Skeleton3D/cu_cat_mesh:cu_cat_blend.side_long")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = PackedFloat32Array(0, 1, 0)
+tracks/24/type = "blend_shape"
+tracks/24/imported = true
+tracks/24/enabled = true
+tracks/24/path = NodePath("RootNode/Skeleton3D/cu_cat_mesh:cu_cat_blend.head_small")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = PackedFloat32Array(0, 1, 0)
+tracks/25/type = "blend_shape"
+tracks/25/imported = true
+tracks/25/enabled = true
+tracks/25/path = NodePath("RootNode/Skeleton3D/cu_cat_mesh:cu_cat_blend.head_big")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = PackedFloat32Array(0, 1, 0)
+tracks/26/type = "blend_shape"
+tracks/26/imported = true
+tracks/26/enabled = true
+tracks/26/path = NodePath("RootNode/Skeleton3D/cu_cat_mesh:cu_cat_blend.neck_small")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = PackedFloat32Array(0, 1, 0)
+tracks/27/type = "blend_shape"
+tracks/27/imported = true
+tracks/27/enabled = true
+tracks/27/path = NodePath("RootNode/Skeleton3D/cu_cat_mesh:cu_cat_blend.neck_big")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = PackedFloat32Array(0, 1, 0)
+tracks/28/type = "blend_shape"
+tracks/28/imported = true
+tracks/28/enabled = true
+tracks/28/path = NodePath("RootNode/Skeleton3D/cu_cat_mesh:cu_cat_blend.nose_big")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = PackedFloat32Array(0, 1, 0)
+tracks/29/type = "blend_shape"
+tracks/29/imported = true
+tracks/29/enabled = true
+tracks/29/path = NodePath("RootNode/Skeleton3D/cu_cat_mesh:cu_cat_blend.nose_small")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = PackedFloat32Array(0, 1, 0)
+tracks/30/type = "blend_shape"
+tracks/30/imported = true
+tracks/30/enabled = true
+tracks/30/path = NodePath("RootNode/Skeleton3D/cu_cat_mesh:cu_cat_blend.eye_shaped")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = PackedFloat32Array(0, 1, 0)
+tracks/31/type = "blend_shape"
+tracks/31/imported = true
+tracks/31/enabled = true
+tracks/31/path = NodePath("RootNode/Skeleton3D/cu_cat_mesh:cu_cat_blend.eye_drooping")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = PackedFloat32Array(0, 1, 0)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1mxwh"]
+_data = {
+"CuCatIdleA": ExtResource("3_ghaou"),
+"CutCatWalkA": ExtResource("4_s4vsq"),
+"Take 001": SubResource("Animation_6uyvy")
+}
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_6iypf"]
+
+[node name="Player" type="CharacterBody3D" groups=["PlayerG"]]
+script = ExtResource("1_43h3w")
+
+[node name="pm" parent="." instance=ExtResource("2_hteoe")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+
+[node name="cu_cat_mesh" parent="pm/RootNode/Skeleton3D" index="0"]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+surface_material_override/0 = SubResource("StandardMaterial3D_wpwa8")
+
+[node name="AnimationPlayer" parent="pm" index="1"]
+libraries = {
+"": SubResource("AnimationLibrary_1mxwh")
+}
+
+[node name="SpringArm" type="Node3D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("3_0idkq")
+
+[node name="Camera3D" type="Camera3D" parent="SpringArm"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.00306, 1.48208)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_6iypf")
+
+[editable path="pm"]
